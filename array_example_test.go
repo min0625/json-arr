@@ -1,15 +1,11 @@
-# json-arr
-[![Go Reference](https://pkg.go.dev/badge/github.com/min0625/json-arr.svg)](https://pkg.go.dev/github.com/min0625/json-arr)
+package arr_test
 
-A JSON array type uses an empty array instead of null when marshaling to JSON.
+import (
+	"encoding/json"
+	"fmt"
 
-## Installation
-```sh
-go get github.com/min0625/json-arr
-```
-
-## Example
-```go
+	jarr "github.com/min0625/json-arr"
+)
 
 func Example() {
 	type User struct {
@@ -40,5 +36,3 @@ func Example() {
 	// Output:
 	// [{"name":"Alice","followers":["Bob"]},{"name":"Bob","followers":[]}]
 }
-
-```
